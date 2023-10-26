@@ -33,9 +33,11 @@ function App() {
 
   console.log("got state")
 
+  console.log(initialState)
+  console.log(localStorage)
+
   const merged = initialState.map((content) => ({
     ...content,
-    description: content.description,
     chapters: content.chapters.map((chapter) => {
 
       const found = localState
