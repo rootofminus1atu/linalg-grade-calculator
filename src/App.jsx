@@ -40,10 +40,14 @@ function App() {
     ...content,
     chapters: content.chapters.map((chapter) => {
 
+      console.log(chapter)
+
       const found = localState
         .find((con) => con.title === content.title)
         .chapters
         .find((cha) => cha.id === chapter.id)
+
+      console.log(found)
 
       if (found) {
         return {
