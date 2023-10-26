@@ -42,11 +42,14 @@ function App() {
         .chapters
         .find((cha) => cha.id === chapter.id)
 
+      const hi = WHYBRUH
+      console.log(hi)
+
       return {
         ...chapter,
-        disabled: WHYBRUH.disabled,
-        checkbox1: WHYBRUH.checkbox1,
-        checkbox2: WHYBRUH.checkbox2
+        disabled: hi.disabled,
+        checkbox1: hi.checkbox1,
+        checkbox2: hi.checkbox2
       }
     })
   }))
