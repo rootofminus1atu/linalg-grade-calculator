@@ -34,7 +34,7 @@ function App() {
   console.log("got state")
 
   console.log(initialState)
-  console.log(localStorage)
+  console.log(localState)
 
   const merged = initialState.map((content) => ({
     ...content,
@@ -45,13 +45,18 @@ function App() {
         .chapters
         .find((cha) => cha.id === chapter.id)
 
-      console.log(found)
-
-      return {
-        ...chapter,
-        disabled: found.disabled,
-        checkbox1: found.checkbox1,
-        checkbox2: found.checkbox2
+      if (found) {
+        return {
+          ...chapter,
+          disabled: found.disabled,
+          checkbox1: found.checkbox1,
+          checkbox2: found.checkbox2,
+          description: chapter.description,
+        }
+      } else {
+        return {
+          ...chapter
+        }
       }
     })
   }))
