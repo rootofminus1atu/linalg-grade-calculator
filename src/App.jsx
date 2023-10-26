@@ -42,8 +42,16 @@ function App() {
 
       console.log(chapter)
 
-      const found = localState
+      const foundContent = localState
         .find((con) => con.title === content.title)
+
+      console.log(foundContent)
+
+      if (!foundContent) {
+        return { ...chapter }
+      }
+
+      const foundChapter = foundContent
         .chapters
         .find((cha) => cha.id === chapter.id)
 
