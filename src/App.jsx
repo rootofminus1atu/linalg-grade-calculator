@@ -15,6 +15,8 @@ import Todos from './components/Todos';
 
 
 function App() {
+  console.log("In app")
+
   const initialState = contents.map((content) => ({
     ...content,
     chapters: content.chapters.map((chapter) => ({
@@ -25,7 +27,11 @@ function App() {
     })),
   }));
 
+  console.log("created initial")
+
   const localState = JSON.parse(localStorage.getItem("state"));
+
+  console.log("got state")
 
   const merged = initialState.map((content) => ({
     ...content,
@@ -44,6 +50,8 @@ function App() {
       }
     })
   }))
+  
+  console.log("merged")
 
   /*
   const mergedState = merge(initialState, localState);
@@ -57,6 +65,8 @@ function App() {
   */
 
   const [state, setState] = useState(merged);
+  
+  console.log("use state init successful")
 
 
 
