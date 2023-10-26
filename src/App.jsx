@@ -51,7 +51,7 @@ function App() {
         return { ...chapter }
       }
 
-      const foundChapter = foundContent
+      const found = foundContent
         .chapters
         .find((cha) => cha.id === chapter.id)
 
