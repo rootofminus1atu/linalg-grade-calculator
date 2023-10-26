@@ -37,32 +37,21 @@ function App() {
     ...content,
     chapters: content.chapters.map((chapter) => {
 
-      const found = localState
+      const WHYBRUH = localState
         .find((con) => con.title === content.title)
         .chapters
         .find((cha) => cha.id === chapter.id)
 
       return {
         ...chapter,
-        disabled: found.disabled,
-        checkbox1: found.checkbox1,
-        checkbox2: found.checkbox2
+        disabled: WHYBRUH.disabled,
+        checkbox1: WHYBRUH.checkbox1,
+        checkbox2: WHYBRUH.checkbox2
       }
     })
   }))
   
   console.log("merged")
-
-  /*
-  const mergedState = merge(initialState, localState);
-
-  const cleanedState = mergedState.map((content) => ({
-    ...content,
-    chapters: content.chapters.filter((chapter) =>
-      contents.find((c) => c.title === content.title).chapters.some((c) => c.id === chapter.id)
-    ),
-  }));
-  */
 
   const [state, setState] = useState(merged);
   
