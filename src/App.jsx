@@ -25,9 +25,27 @@ function App() {
     })),
   }));
 
-
   const localState = JSON.parse(localStorage.getItem("state"));
 
+  const merged = initialState.map((content) => ({
+    ...content,
+    chapters: content.chapters.map((chapter) => {
+
+      const found = localState
+        .find((con) => con.title === content.title)
+        .chapters
+        .find((cha) => cha.id === chapter.id)
+
+      return {
+        ...chapter,
+        disabled: found.disabled,
+        checkbox1: found.checkbox1,
+        checkbox2: found.checkbox2
+      }
+    })
+  }))
+
+  /*
   const mergedState = merge(initialState, localState);
 
   const cleanedState = mergedState.map((content) => ({
@@ -36,8 +54,9 @@ function App() {
       contents.find((c) => c.title === content.title).chapters.some((c) => c.id === chapter.id)
     ),
   }));
+  */
 
-  const [state, setState] = useState(cleanedState);
+  const [state, setState] = useState(merged);
 
 
 

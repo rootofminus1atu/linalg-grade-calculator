@@ -16,8 +16,6 @@ const headerStyle = {
 
 
 export default function Contents({ state, updateCheckbox1, updateCheckbox2, updateDisabled }) {
-  console.log("state is", state)
-
   return (
     <TableContainer component={Paper} sx={{ 
       maxHeight: 600, 
