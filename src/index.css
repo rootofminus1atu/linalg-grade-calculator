@@ -1,0 +1,11 @@
+main .content-group {
+  padding-top: 3rem;
+}
+
+main .content-group:last-child {
+  padding: 3rem 0;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}
