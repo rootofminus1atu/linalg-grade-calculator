@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { merge } from 'lodash'
+import { initial, merge } from 'lodash'
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 
@@ -35,21 +35,21 @@ function App() {
 
   const merged = initialState.map((content) => ({
     ...content,
+    description: content.description,
     chapters: content.chapters.map((chapter) => {
 
-      const WHYBRUH = localState
+      const found = localState
         .find((con) => con.title === content.title)
         .chapters
         .find((cha) => cha.id === chapter.id)
 
-      const hi = WHYBRUH
-      console.log(hi)
+      console.log(found)
 
       return {
         ...chapter,
-        disabled: hi.disabled,
-        checkbox1: hi.checkbox1,
-        checkbox2: hi.checkbox2
+        disabled: found.disabled,
+        checkbox1: found.checkbox1,
+        checkbox2: found.checkbox2
       }
     })
   }))
