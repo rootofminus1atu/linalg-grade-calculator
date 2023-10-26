@@ -40,6 +40,11 @@ function App() {
     ...content,
     chapters: content.chapters.map((chapter) => {
 
+      if (!localState) {
+        console.log("local storage was empty lol")
+        return { ...chapter }
+      }
+
       console.log(chapter)
 
       const foundContent = localState
