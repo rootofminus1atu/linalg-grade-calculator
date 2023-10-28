@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { initial, merge } from 'lodash'
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 
@@ -41,7 +40,7 @@ function App() {
     chapters: content.chapters.map((chapter) => {
 
       if (!localState) {
-        console.log("local storage was empty lol")
+        console.log("local state was empty lol")
         return { ...chapter }
       }
 
@@ -50,7 +49,7 @@ function App() {
       const foundContent = localState
         .find((con) => con.title === content.title)
 
-      console.log(foundContent)
+      console.log("after finding content", foundContent)
 
       if (!foundContent) {
         return { ...chapter }
@@ -60,20 +59,18 @@ function App() {
         .chapters
         .find((cha) => cha.id === chapter.id)
 
-      console.log(found)
+      console.log("after finding chapter", found)
 
-      if (found) {
-        return {
-          ...chapter,
-          disabled: found.disabled,
-          checkbox1: found.checkbox1,
-          checkbox2: found.checkbox2,
-          description: chapter.description,
-        }
-      } else {
-        return {
-          ...chapter
-        }
+      if (!found) {
+        return { ...chapter }
+      }
+
+      return {
+        ...chapter,
+        disabled: found.disabled,
+        checkbox1: found.checkbox1,
+        checkbox2: found.checkbox2,
+        description: chapter.description,
       }
     })
   }))
