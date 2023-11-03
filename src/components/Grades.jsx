@@ -87,7 +87,7 @@ export default function Grades({ amount }) {
             <TableRow >
               <HeaderTC style={headerStyle} align="center">Mark</HeaderTC>
               <HeaderTC style={headerStyle} align="center">All</HeaderTC>
-              <HeaderTC style={headerStyle} align="center">Standard</HeaderTC>
+              <HeaderTC style={headerStyle} align="center">Simple</HeaderTC>
               <HeaderTC style={headerStyle} align="center">Core half</HeaderTC>
               <HeaderTC style={headerStyle} align="center">Core full</HeaderTC>
             </TableRow>

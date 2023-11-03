@@ -12,7 +12,7 @@ export default function Legend() {
           <ListItemText primary={<Typography variant="body1"><strong>All:</strong> Counts all the checkboxes.</Typography>} />
         </ListItem>
         <ListItem>
-          <ListItemText primary={<Typography variant="body1"><strong>Standard:</strong> Counts simple standards with only 1 checkbox.</Typography>} />
+          <ListItemText primary={<Typography variant="body1"><strong>Simple:</strong> Counts simple standards with only 1 checkbox.</Typography>} />
         </ListItem>
         <ListItem>
           <ListItemText primary={<Typography variant="body1"><strong>Core half:</strong> Counts core standards (those with 2 checkboxes) if they're half done.</Typography>} />
