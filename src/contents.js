@@ -100,7 +100,7 @@ const contents = [
             {
                 id: 'EV.3',
                 description: 'I can determine if two vectors are orthogonal. I can compute projection vectors.',
-                core: true,
+                core: false,
             },
         ]
     },
