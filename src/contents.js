@@ -165,12 +165,12 @@ const contents = [
             {
                 id: 'E.1',
                 description: 'I can state the definition of eigenvalue/eigenvector and demonstrate its meaning.',
-                core: true,
+                core: false,
             },
             {
                 id: 'E.2',
                 description: 'I can compute the characteristic polynomial of a square matrix. I can determine the eigenvalues of a square matrix and its corresponding eigenvectors.',
-                core: true,
+                core: false,
             },
             {
                 id: 'E.3',
