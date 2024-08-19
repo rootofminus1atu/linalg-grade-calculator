@@ -1,6 +1,6 @@
 # Linear Algebra Grade Calculator
 
-This is a web application made to automatically calculate grades, given a rather unusual, overcomplicated, marking scheme. To see it in action check out the [live demo](https://linalg-grade-calculator.vercel.app/).
+This is a web application made to automatically calculate grades, given a rather unusual, overcomplicated, marking scheme. To see it in action check out the [live demo](https://linalg-grade-calculator.onrender.com/).
 
 ![screenshot](images/screenshot.png)
 
